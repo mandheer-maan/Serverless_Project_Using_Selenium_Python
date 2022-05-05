@@ -87,6 +87,19 @@ rm headless-chromium.zip
 
 ### Deploy Lambda Layers
    - Go to **/seleniumLayer** directory
+```
+cd seleniumLayer
+```
+
+```
+source ~/.bashrc
+```
+```
+aws configure set aws_access_key_id "AWS_ID"
+aws configure set aws_secret_access_key "AWS_ACCESS_KEY"
+aws configure set region "us-east-1"
+aws configure set output "json"
+```
 
 ```  
 $ serverless deploy 
@@ -94,6 +107,11 @@ $ serverless deploy
 
 ### Deploy Lambda Function
    - Go to **/lambda** directory
+```
+cd lambda
+```
+
+
 
 ```  
 $ serverless deploy 
