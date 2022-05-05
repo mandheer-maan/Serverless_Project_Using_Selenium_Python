@@ -17,8 +17,6 @@ RUN yum -y update && \
 
 RUN aws --version && \
     sam --version
-    
-RUN pip3 install selenium==2.37    
 ```   
 
 ###  Run the image that was just built
@@ -29,6 +27,11 @@ docker run -it <image-name>
 
 ``` 
 git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Python.git
+```
+
+### Download Selenium (version: 2.37)
+```
+pip3 install -t seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
 ```
 
 ### Provide the name for Selenium layer and Lambda function 
