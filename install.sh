@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # download chrome driver
 mkdir -p seleniumLayer/chromedriver
 cd seleniumLayer/chromedriver
