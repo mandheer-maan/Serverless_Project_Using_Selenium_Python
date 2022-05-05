@@ -31,7 +31,7 @@ git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Pyt
 
 ### Download Selenium (version: 2.37)
 ```
-pip3 install -t seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
+pip3 install -t Serverless_Project_Using_Selenium_Python/seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
 ```
 
 ### Provide the name for Selenium layer and Lambda function 
@@ -43,10 +43,11 @@ sed -i 's/project1/PROJECT_NAME/g' Serverless_Project_Using_Selenium_Python/lamb
 
 ### Configure AWS profile
 ```
-aws configure set aws_access_key_id "AWS_ID"  --profile PROFILE_ID
-aws configure set aws_secret_access_key "AWS_ACCESS_KEY" --profile PROFILE_ID
-aws configure set region "us-east-1" --profile PROFILE_ID
-aws configure set output "json" --profile PROFILE_ID
+aws configure set aws_access_key_id "AWS_ID";
+aws configure set aws_secret_access_key "AWS_ACCESS_KEY";
+aws configure set region "us-east-1";
+aws configure set output "json";
+aws configure set aws_profile "PROFILE_ID";
 ```
 
 ### Prepare chrome related drivers (in .zip file)
