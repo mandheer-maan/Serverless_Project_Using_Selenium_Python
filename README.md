@@ -28,7 +28,12 @@ docker run -it <image-name>
 git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Python.git
 ```
 
+
 ## Folder Hierarchy
+
+```
+cd Serverless_Project_Using_Selenium_Python/
+```
 
 ```
 ── /seleniumLayer/  # lambda layers
