@@ -12,7 +12,7 @@ FROM amazon/aws-sam-cli-build-image-python3.6
 
 RUN yum -y update && \
     yum -y install nano && \
-    yum -y install npm && \
+    curl -o- -L https://slss.io/install | VERSION=2.72.2 bash && \
     yum clean all
 
 RUN aws --version && \
