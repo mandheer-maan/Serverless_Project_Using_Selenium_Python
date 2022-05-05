@@ -32,13 +32,13 @@ git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Pyt
 ### Provide the name for Selenium layer 
 (Replace ```SELENIUM_LAYER_NAME``` with user-defined name)
 ```
-sed -i 's/selenium-layer/SELENIUM_LAYER_NAME/g' Serverless_Project_Using_Selenium_Python/seleniumLayer/serverless.yaml
+sed -i 's/project1/PROJECT_NAME/g' Serverless_Project_Using_Selenium_Python/seleniumLayer/serverless.yaml
 ```
 
 ### Provide the name for Lambda function 
 (Replace ```LAMBDA_FUNCTION_NAME``` with user-defined name)
 ```
-sed -i 's/selenium-lambda/LAMBDA_FUNCTION_NAME/g' Serverless_Project_Using_Selenium_Python/lambda/serverless.yaml
+sed -i 's/project1/PROJECT_NAME/g' Serverless_Project_Using_Selenium_Python/lambda/serverless.yaml
 ```
 
 ### Configure AWS profile
