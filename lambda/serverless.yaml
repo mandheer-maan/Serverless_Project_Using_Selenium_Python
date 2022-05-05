@@ -1,4 +1,4 @@
-service: selenium-lambda
+service: selenium-lambda-project1
 
 provider:
   name: aws
@@ -11,5 +11,5 @@ functions:
   hello:
     handler: handler.hello
     layers:
-      - ${cf:selenium-layer-dev.SeleniumLayerExport}
-      - ${cf:selenium-layer-dev.ChromedriverLayerExport}
+      - ${cf:selenium-layer--project1-dev.SeleniumLayerExport}
+      - ${cf:selenium-layer--project1-dev.ChromedriverLayerExport}
