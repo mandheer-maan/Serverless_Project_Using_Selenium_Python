@@ -2,6 +2,12 @@
 
 ---
 
+### Clone the repository
+
+``` 
+git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Python.git
+```
+
 ## Folder Hierarchy
 
 ```
