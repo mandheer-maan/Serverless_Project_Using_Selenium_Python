@@ -90,7 +90,7 @@ rm headless-chromium.zip
   - Do this if you don't have serverless in your machine yet
 
 ``` bash
-npm install -g serverless
+curl -o- -L https://slss.io/install | VERSION=2.72.2 bash
 ```
 
 ### Deploy Lambda Layers
