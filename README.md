@@ -56,7 +56,12 @@ $ serverless invoke --function hello
 }
 ```
 ### Commands Used
-  
+
+```
+$ serverless deploy  
+
+$ serverless invoke --function hello
+```
 ---  
   
 - **For Reference go through [this link](https://github.com/yai333/Selenium-UI-testing-with-AWS-Lambda-Layers).** :thumbsup:
