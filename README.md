@@ -51,21 +51,21 @@ aws configure set output "json" --profile PROFILE_ID
 
 ### Prepare chrome related drivers (in .zip file)
 ```
-cd Serverless_Project_Using_Selenium_Python
-chmod +x install.sh
+cd Serverless_Project_Using_Selenium_Python;
+chmod +x install.sh;
 ./install.sh
 ```
 
 ### Deploy Selenium Layers
 ```
-cd seleniumLayer
+cd seleniumLayer;
 serverless deploy 
 ```
 
 
 ### Deploy Lambda Function
 ```
-cd ../lambda
+cd ../lambda;
 serverless deploy 
 ```
 
