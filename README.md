@@ -85,16 +85,6 @@ $ serverless invoke --function hello
 "body": "Headless Chrome Initialized, Page title Home | Neami    National"
 }
 ```
-### Commands Used
-
-```
-$ serverless deploy  
-
-$ serverless invoke --function hello
-```
----  
-
-
 
 ## Project Hierarchy
 ```
@@ -113,8 +103,4 @@ $ serverless invoke --function hello
   
   ```
   
-  ### Extra command : To refresh the terminal state
-  ```
-  source ~/.bashrc
-  ```
 - **For Reference go through [this link](https://github.com/yai333/Selenium-UI-testing-with-AWS-Lambda-Layers).** :thumbsup:
