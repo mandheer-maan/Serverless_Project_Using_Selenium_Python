@@ -20,7 +20,17 @@
   
   ```
   
-### First of all Run bash script for zipping chromediver and headless-chromium
+### First of all Install Selenium library
+*Lambda runtimes include paths in the ```/opt``` directory to ensure that your function code has access to libraries that are included in layers.*
+
+*To include libraries in a layer, place them in ```python/lib/python3.6/site-packages/```*
+
+``` bash
+# download Selenium 2.37 to layer directory
+$ pip3 install -t seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
+```
+
+### Run bash script for zipping chromediver and headless-chromium
 
 ``` bash
 #!/bin/sh
