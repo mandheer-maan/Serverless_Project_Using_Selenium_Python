@@ -1,7 +1,27 @@
 # Serverless_Project_Using_Selenium_Python
 
----
+###  First prepare image using docker
+####  Build the image using the follwoing command: (Dockerfile is mentioned below)
+```
+docker build -t <image-name> <path of the Dockerfile>
+```
 
+Dockerfile
+```
+FROM amazon/aws-sam-cli-build-image-python3.6
+
+RUN yum -y update && \
+    yum -y install nano && \
+    yum clean all
+
+RUN aws --version && \
+    sam --version
+```   
+
+###  Run the image that was just built
+```
+docker run -it <image-name>
+```
 ### Clone the repository
 
 ``` 
