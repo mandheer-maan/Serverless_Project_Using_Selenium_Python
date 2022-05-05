@@ -85,14 +85,6 @@ rm headless-chromium.zip
 
 ```
 
-
-### Install serverless command
-  - Do this if you don't have serverless in your machine yet
-
-``` bash
-curl -o- -L https://slss.io/install | VERSION=2.72.2 bash
-```
-
 ### Deploy Lambda Layers
    - Go to **/seleniumLayer** directory
 
