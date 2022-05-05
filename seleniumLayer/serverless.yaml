@@ -1,4 +1,4 @@
-service: selenium-layer
+service: selenium-layer-project1
 
 provider:
   name: aws
@@ -22,11 +22,11 @@ resources:
   Outputs:
     SeleniumLayerExport:
         Value:
-          Ref: SeleniumLambdaLayer
+          Ref: SeleniumLambdaLayer-project1
         Export:
-          Name: SeleniumLambdaLayer
+          Name: SeleniumLambdaLayer-project1
     ChromedriverLayerExport:
        Value:
-         Ref: ChromedriverLambdaLayer
+         Ref: ChromedriverLambdaLayer-project1
        Export:
-         Name: ChromedriverLambdaLayer
+         Name: ChromedriverLambdaLayer-project1
