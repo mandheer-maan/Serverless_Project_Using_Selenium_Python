@@ -29,6 +29,18 @@ docker run -it <image-name>
 git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Python.git
 ```
 
+### Provide the name for Selenium layer 
+(Replace ```SELENIUM_LAYER_NAME``` with user-defined name)
+```
+sed -i 's/selenium-lambda/SELENIUM_LAYER_NAME/g' Serverless_Project_Using_Selenium_Python/seleniumLayer/serverless.yaml
+```
+
+### Provide the name for Lambda function 
+(Replace ```LAMBDA_FUNCTION_NAME``` with user-defined name)
+```
+sed -i 's/selenium-lambda/LAMBDA_FUNCTION_NAME/g' Serverless_Project_Using_Selenium_Python/lambda/serverless.yaml
+```
+
 ### Configure AWS profile
 ```
 aws configure set aws_access_key_id "AWS_ID"  --profile PROFILE_ID
@@ -44,7 +56,6 @@ aws configure set output "json" --profile PROFILE_ID
 ```
 cd Serverless_Project_Using_Selenium_Python
 pip3 install -t seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
-
 ```
 
 ### Prepare chrome related drivers (in .zip file)
