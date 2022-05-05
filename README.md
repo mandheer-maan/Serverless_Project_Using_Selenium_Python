@@ -21,9 +21,9 @@
   ```
   
 ### First of all Install Selenium library
-**Lambda runtimes include paths in the ```/opt``` directory to ensure that your function code has access to libraries that are included in layers.**
+Lambda runtimes include paths in the ```/opt``` directory to ensure that your function code has access to libraries that are included in layers.
 
-**To include libraries in a layer, place them in ```python/lib/python3.6/site-packages/```**
+To include libraries in a layer, place them in ```python/lib/python3.6/site-packages/```
 
 ``` bash
 # download Selenium 2.37 to layer directory
