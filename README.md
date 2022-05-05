@@ -29,15 +29,10 @@ docker run -it <image-name>
 git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Python.git
 ```
 
-### Provide the name for Selenium layer 
-(Replace ```PROJECT_NAME``` with user-defined name)
+### Provide the name for Selenium layer and Lambda function 
+(Replace ```PROJECT_NAME``` with user-defined name) 
 ```
 sed -i 's/project1/PROJECT_NAME/g' Serverless_Project_Using_Selenium_Python/seleniumLayer/serverless.yaml
-```
-
-### Provide the name for Lambda function 
-(Replace ```PROJECT_NAME``` with user-defined name)
-```
 sed -i 's/project1/PROJECT_NAME/g' Serverless_Project_Using_Selenium_Python/lambda/serverless.yaml
 ```
 
