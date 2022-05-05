@@ -108,10 +108,9 @@ $ serverless deploy
 ### Deploy Lambda Function
    - Go to **/lambda** directory
 ```
-cd lambda
+cd ../lambda
+
 ```
-
-
 
 ```  
 $ serverless deploy 
