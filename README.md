@@ -1,7 +1,7 @@
 # Serverless_Project_Using_Selenium_Python
 
 ###  First prepare image using docker
-####  Build the image using the follwoing command: (Dockerfile is mentioned below)
+####  Build an image using the follwoing command: (Dockerfile is mentioned below)
 ```
 docker build -t <image-name> <path of the Dockerfile>
 ```
@@ -29,91 +29,41 @@ docker run -it <image-name>
 git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Python.git
 ```
 
+### Configure AWS profile
+```
+aws configure set aws_access_key_id "AWS_ID"  --profile PROFILE_ID
+aws configure set aws_secret_access_key "AWS_ACCESS_KEY" --profile PROFILE_ID
+aws configure set region "us-east-1" --profile PROFILE_ID
+aws configure set output "json" --profile PROFILE_ID
+```
 
-## Folder Hierarchy
+### Install Selenium library
+ - Lambda runtimes include paths in the ```/opt``` directory to ensure that your function code has access to libraries that are included in layers.
+ - To include libraries in a layer, place them in ```python/lib/python3.6/site-packages/```
 
 ```
 cd Serverless_Project_Using_Selenium_Python
-```
+pip3 install -t seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
 
 ```
-── /seleniumLayer/  # lambda layers
-  ├── /selenium  lambda layer of selenium lib
-  │  └──/python/      # python libs
-  │   └── /lib/    
-  │     └── /python3.6/*    
-  ├── /chromedriver/    # lambda layer of headless Chrome 
-  │ ├── /chromedriver   # chrome driver
-  │ └── /headless-chromium # headless chrome binary
-  └── /serverless.yaml     
-── /lambda/            # lambda function
-  ├── /handler.py      # source code of lambda function 
-  └── /serverless.yaml # serverless config\
-  
-  ```
-  
-### First of all Install Selenium library
- - Lambda runtimes include paths in the ```/opt``` directory to ensure that your function code has access to libraries that are included in layers.
 
- - To include libraries in a layer, place them in ```python/lib/python3.6/site-packages/```
-
-``` bash
-# download Selenium 2.37 to layer directory
-$ pip3 install -t seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
-```
-
-### Run the below bash script for zipping chromediver and headless-chromium using the below commands
-
+### Prepare chrome related drivers (in .zip file)
 ```
 chmod +x install.sh
-
 ./install.sh
 ```
 
-``` bash
-#!/bin/bash
-# download chrome driver
-mkdir -p seleniumLayer/chromedriver
-cd seleniumLayer/chromedriver
-curl -SL https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip > chromedriver.zip
-unzip chromedriver.zip
-rm chromedriver.zip
-# download chrome binary
-curl -SL https://github.com/adieuadieu/serverless-chrome/releases/download/v1.0.0-41/stable-headless-chromium-amazonlinux-2017-03.zip > headless-chromium.zip
-unzip headless-chromium.zip
-rm headless-chromium.zip
-
-```
-
-### Deploy Lambda Layers
-   - Go to **/seleniumLayer** directory
+### Deploy Selenium Layers
 ```
 cd seleniumLayer
+serverless deploy 
 ```
 
-```
-source ~/.bashrc
-```
-```
-aws configure set aws_access_key_id "AWS_ID"
-aws configure set aws_secret_access_key "AWS_ACCESS_KEY"
-aws configure set region "us-east-1"
-aws configure set output "json"
-```
-
-```  
-$ serverless deploy 
-```
 
 ### Deploy Lambda Function
-   - Go to **/lambda** directory
 ```
 cd ../lambda
-
-```
-
-```  
-$ serverless deploy 
+serverless deploy 
 ```
 
 ### Start Testing
@@ -139,5 +89,28 @@ $ serverless deploy
 $ serverless invoke --function hello
 ```
 ---  
+
+
+
+## Project Hierarchy
+```
+── /seleniumLayer/  # lambda layers
+  ├── /selenium  lambda layer of selenium lib
+  │  └──/python/      # python libs
+  │   └── /lib/    
+  │     └── /python3.6/*    
+  ├── /chromedriver/    # lambda layer of headless Chrome 
+  │ ├── /chromedriver   # chrome driver
+  │ └── /headless-chromium # headless chrome binary
+  └── /serverless.yaml     
+── /lambda/            # lambda function
+  ├── /handler.py      # source code of lambda function 
+  └── /serverless.yaml # serverless config\
   
+  ```
+  
+  ### Extra command : To refresh the terminal state
+  ```
+  source ~/.bashrc
+  ```
 - **For Reference go through [this link](https://github.com/yai333/Selenium-UI-testing-with-AWS-Lambda-Layers).** :thumbsup:
