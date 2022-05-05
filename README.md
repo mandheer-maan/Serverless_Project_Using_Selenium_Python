@@ -17,6 +17,8 @@ RUN yum -y update && \
 
 RUN aws --version && \
     sam --version
+    
+RUN pip3 install selenium==2.37    
 ```   
 
 ###  Run the image that was just built
@@ -44,17 +46,9 @@ aws configure set region "us-east-1" --profile PROFILE_ID
 aws configure set output "json" --profile PROFILE_ID
 ```
 
-### Install Selenium library
- - Lambda runtimes include paths in the ```/opt``` directory to ensure that your function code has access to libraries that are included in layers.
- - To include libraries in a layer, place them in ```python/lib/python3.6/site-packages/```
-
-```
-cd Serverless_Project_Using_Selenium_Python
-pip3 install -t seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
-```
-
 ### Prepare chrome related drivers (in .zip file)
 ```
+cd Serverless_Project_Using_Selenium_Python
 chmod +x install.sh
 ./install.sh
 ```
