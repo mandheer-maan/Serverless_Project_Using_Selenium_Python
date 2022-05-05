@@ -61,10 +61,16 @@ cd Serverless_Project_Using_Selenium_Python/
 $ pip3 install -t seleniumLayer/selenium/python/lib/python3.6/site-packages selenium==2.37
 ```
 
-### Run bash script for zipping chromediver and headless-chromium
+### Run the below bash script for zipping chromediver and headless-chromium using the below commands
+
+```
+chmod +x install.sh
+
+./install.sh
+```
 
 ``` bash
-#!/bin/sh
+#!/bin/bash
 # download chrome driver
 mkdir -p seleniumLayer/chromedriver
 cd seleniumLayer/chromedriver
