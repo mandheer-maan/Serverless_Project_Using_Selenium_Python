@@ -11,5 +11,5 @@ functions:
   hello:
     handler: handler.hello
     layers:
-      - ${cf:selenium-layer--project1-dev.SeleniumLayerExport}
-      - ${cf:selenium-layer--project1-dev.ChromedriverLayerExport}
+      - ${cf:selenium-layer-project1-dev.SeleniumLayerExport}
+      - ${cf:selenium-layer-project1-dev.ChromedriverLayerExport}
