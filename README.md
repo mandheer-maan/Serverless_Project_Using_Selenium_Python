@@ -32,7 +32,7 @@ git clone https://github.com/mandheer-maan/Serverless_Project_Using_Selenium_Pyt
 ## Folder Hierarchy
 
 ```
-cd Serverless_Project_Using_Selenium_Python/
+cd Serverless_Project_Using_Selenium_Python
 ```
 
 ```
