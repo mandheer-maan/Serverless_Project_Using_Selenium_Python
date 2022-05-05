@@ -22,11 +22,11 @@ resources:
   Outputs:
     SeleniumLayerExport:
         Value:
-          Ref: SeleniumLambdaLayer-project1
+          Ref: SeleniumLambdaLayer
         Export:
           Name: SeleniumLambdaLayer-project1
     ChromedriverLayerExport:
        Value:
-         Ref: ChromedriverLambdaLayer-project1
+         Ref: ChromedriverLambdaLayer
        Export:
          Name: ChromedriverLambdaLayer-project1
