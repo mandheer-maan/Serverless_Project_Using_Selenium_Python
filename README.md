@@ -74,7 +74,7 @@ serverless deploy
    - Go to **/lambda** directory  
 
 ```
-$ serverless invoke --function hello
+serverless invoke --function hello
 ```
 
 ### You should get Response as below
